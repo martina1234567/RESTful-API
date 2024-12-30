@@ -3,13 +3,24 @@ package com.example.car_managment.dto;
 import java.util.List;
 
 public class CarDto {
+
     private Long id;
     private String make;
     private String model;
     private int productionYear;
     private String licensePlate;
-    private List<GarageDto> garages;
+    private List<Long> garageIds; // Списък от ID на свързаните сервизи
+    private List<GarageDto> garages; // Това е правилно, ако използвате List<GarageDto>
 
+    // Getters and Setters
+
+    public List<GarageDto> getGarages() {
+        return garages;
+    }
+
+    public void setGarages(List<GarageDto> garages) {
+        this.garages = garages;
+    }
     // Getters and Setters
     public Long getId() {
         return id;
@@ -51,11 +62,11 @@ public class CarDto {
         this.licensePlate = licensePlate;
     }
 
-    public List<GarageDto> getGarages() {
-        return garages;
+    public List<Long> getGarageIds() {
+        return garageIds;
     }
 
-    public void setGarages(List<GarageDto> garages) {
-        this.garages = garages;
+    public void setGarageIds(List<Long> garageIds) {
+        this.garageIds = garageIds;
     }
 }
