@@ -1,0 +1,505 @@
+2024-12-29T11:00:23.531+02:00  INFO 4264 --- [restartedMain] c.e.c.CarManagementApplication           : Starting CarManagementApplication using Java 17.0.1 with PID 4264 (C:\Users\User\spring\car-managment\target\classes started by kiski in C:\Users\User\spring\car-managment)
+2024-12-29T11:00:23.544+02:00  INFO 4264 --- [restartedMain] c.e.c.CarManagementApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-12-29T11:00:23.664+02:00  INFO 4264 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-29T11:00:23.665+02:00  INFO 4264 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-29T11:00:25.054+02:00  INFO 4264 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-29T11:00:25.180+02:00  INFO 4264 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 103 ms. Found 2 JPA repository interfaces.
+2024-12-29T11:00:26.296+02:00  INFO 4264 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8088 (http)
+2024-12-29T11:00:26.312+02:00  INFO 4264 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-29T11:00:26.312+02:00  INFO 4264 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-29T11:00:26.382+02:00  INFO 4264 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-29T11:00:26.382+02:00  INFO 4264 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2717 ms
+2024-12-29T11:00:26.633+02:00  INFO 4264 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-29T11:00:26.733+02:00  INFO 4264 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2024-12-29T11:00:26.781+02:00  INFO 4264 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-29T11:00:27.231+02:00  INFO 4264 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-29T11:00:27.266+02:00  INFO 4264 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-29T11:00:27.557+02:00  INFO 4264 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/testdb user=SA  
+2024-12-29T11:00:27.562+02:00  INFO 4264 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-29T11:00:27.610+02:00  WARN 4264 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-29T11:00:27.654+02:00  INFO 4264 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-29T11:00:28.951+02:00  INFO 4264 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-29T11:00:29.055+02:00  INFO 4264 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-29T11:00:29.692+02:00  WARN 4264 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-29T11:00:29.728+02:00  WARN 4264 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 6e2e7aca-4312-4bab-8313-79947faceef3
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-12-29T11:00:29.762+02:00  INFO 4264 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-12-29T11:00:30.519+02:00  INFO 4264 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/testdb'
+2024-12-29T11:00:30.619+02:00  INFO 4264 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-29T11:00:30.684+02:00  INFO 4264 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8088 (http) with context path '/'
+2024-12-29T11:00:30.699+02:00  INFO 4264 --- [restartedMain] c.e.c.CarManagementApplication           : Started CarManagementApplication in 7.919 seconds (process running for 8.679)
+2024-12-29T11:00:45.712+02:00  INFO 4264 --- [http-nio-8088-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-29T11:00:45.713+02:00  INFO 4264 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-29T11:00:45.716+02:00  INFO 4264 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-12-29T11:04:06.291+02:00  INFO 4264 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-29T11:04:06.798+02:00  INFO 4264 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-29T11:04:06.805+02:00  INFO 4264 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-29T11:04:06.807+02:00  INFO 4264 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-29T11:04:06.807+02:00  INFO 4264 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-29T11:04:58.676+02:00  INFO 21920 --- [restartedMain] c.e.c.CarManagementApplication           : Starting CarManagementApplication using Java 17.0.1 with PID 21920 (C:\Users\User\spring\car-managment\target\classes started by kiski in C:\Users\User\spring\car-managment)
+2024-12-29T11:04:58.692+02:00  INFO 21920 --- [restartedMain] c.e.c.CarManagementApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-12-29T11:04:58.859+02:00  INFO 21920 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-29T11:04:58.860+02:00  INFO 21920 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-29T11:05:00.876+02:00  INFO 21920 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-29T11:05:01.141+02:00  INFO 21920 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 223 ms. Found 2 JPA repository interfaces.
+2024-12-29T11:05:03.572+02:00  INFO 21920 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8088 (http)
+2024-12-29T11:05:03.621+02:00  INFO 21920 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-29T11:05:03.621+02:00  INFO 21920 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-29T11:05:03.822+02:00  INFO 21920 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-29T11:05:03.832+02:00  INFO 21920 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4970 ms
+2024-12-29T11:05:04.677+02:00  INFO 21920 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-29T11:05:05.018+02:00  INFO 21920 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2024-12-29T11:05:05.163+02:00  INFO 21920 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-29T11:05:06.064+02:00  INFO 21920 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-29T11:05:06.241+02:00  INFO 21920 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-29T11:05:07.030+02:00  INFO 21920 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/testdb user=SA  
+2024-12-29T11:05:07.035+02:00  INFO 21920 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-29T11:05:07.093+02:00  WARN 21920 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-29T11:05:07.167+02:00  INFO 21920 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-29T11:05:09.130+02:00  INFO 21920 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-29T11:05:09.266+02:00  INFO 21920 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-29T11:05:09.961+02:00  WARN 21920 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-29T11:05:10.004+02:00  WARN 21920 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 74802d51-466c-4e86-b393-4d3aca9a5c8c
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-12-29T11:05:10.056+02:00  INFO 21920 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-12-29T11:05:12.156+02:00  INFO 21920 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/testdb'
+2024-12-29T11:05:12.737+02:00  INFO 21920 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-29T11:05:12.865+02:00  INFO 21920 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8088 (http) with context path '/'
+2024-12-29T11:05:12.984+02:00  INFO 21920 --- [restartedMain] c.e.c.CarManagementApplication           : Started CarManagementApplication in 15.928 seconds (process running for 17.265)
+2024-12-29T11:06:15.671+02:00  INFO 21920 --- [http-nio-8088-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-29T11:06:15.672+02:00  INFO 21920 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-29T11:06:15.676+02:00  INFO 21920 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-12-29T11:08:56.065+02:00  INFO 21920 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-29T11:08:56.766+02:00  INFO 21920 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-29T11:08:56.796+02:00  INFO 21920 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-29T11:08:56.806+02:00  INFO 21920 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-29T11:08:56.840+02:00  INFO 21920 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-29T11:27:22.127+02:00  INFO 6880 --- [restartedMain] c.e.c.CarManagementApplication           : Starting CarManagementApplication using Java 17.0.1 with PID 6880 (C:\Users\User\spring\car-managment\target\classes started by kiski in C:\Users\User\spring\car-managment)
+2024-12-29T11:27:22.127+02:00  INFO 6880 --- [restartedMain] c.e.c.CarManagementApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-12-29T11:27:22.264+02:00  INFO 6880 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-29T11:27:22.264+02:00  INFO 6880 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-29T11:27:23.885+02:00  INFO 6880 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-29T11:27:24.044+02:00  INFO 6880 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 136 ms. Found 2 JPA repository interfaces.
+2024-12-29T11:27:25.483+02:00  INFO 6880 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8088 (http)
+2024-12-29T11:27:25.513+02:00  INFO 6880 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-29T11:27:25.513+02:00  INFO 6880 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-29T11:27:25.624+02:00  INFO 6880 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-29T11:27:25.624+02:00  INFO 6880 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3354 ms
+2024-12-29T11:27:25.964+02:00  INFO 6880 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-29T11:27:26.054+02:00  INFO 6880 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2024-12-29T11:27:26.124+02:00  INFO 6880 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-29T11:27:26.713+02:00  INFO 6880 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-29T11:27:26.775+02:00  INFO 6880 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-29T11:27:27.190+02:00  INFO 6880 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/testdb user=SA  
+2024-12-29T11:27:27.193+02:00  INFO 6880 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-29T11:27:27.231+02:00  WARN 6880 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-29T11:27:27.262+02:00  INFO 6880 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-29T11:27:28.774+02:00  INFO 6880 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-29T11:27:28.902+02:00  INFO 6880 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-29T11:27:29.721+02:00  WARN 6880 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-29T11:27:29.762+02:00  WARN 6880 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 72faa513-690c-4785-926f-0597f8464ef3
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-12-29T11:27:29.806+02:00  INFO 6880 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-12-29T11:27:30.771+02:00  INFO 6880 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/testdb'
+2024-12-29T11:27:30.901+02:00  INFO 6880 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-29T11:27:30.976+02:00  INFO 6880 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8088 (http) with context path '/'
+2024-12-29T11:27:30.999+02:00  INFO 6880 --- [restartedMain] c.e.c.CarManagementApplication           : Started CarManagementApplication in 9.834 seconds (process running for 10.996)
+2024-12-29T11:27:32.920+02:00  INFO 6880 --- [http-nio-8088-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-29T11:27:32.921+02:00  INFO 6880 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-29T11:27:32.924+02:00  INFO 6880 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-12-29T11:32:34.994+02:00  INFO 6880 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-29T11:32:35.525+02:00  INFO 6880 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-29T11:32:35.533+02:00  INFO 6880 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-29T11:32:35.534+02:00  INFO 6880 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-29T11:32:35.534+02:00  INFO 6880 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-29T11:34:46.841+02:00  INFO 2320 --- [restartedMain] c.e.c.CarManagementApplication           : Starting CarManagementApplication using Java 17.0.1 with PID 2320 (C:\Users\User\spring\car-managment\target\classes started by kiski in C:\Users\User\spring\car-managment)
+2024-12-29T11:34:46.844+02:00  INFO 2320 --- [restartedMain] c.e.c.CarManagementApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-12-29T11:34:46.972+02:00  INFO 2320 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-29T11:34:46.972+02:00  INFO 2320 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-29T11:34:48.961+02:00  INFO 2320 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-29T11:34:49.113+02:00  INFO 2320 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 122 ms. Found 2 JPA repository interfaces.
+2024-12-29T11:34:50.633+02:00  INFO 2320 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8088 (http)
+2024-12-29T11:34:50.674+02:00  INFO 2320 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-29T11:34:50.675+02:00  INFO 2320 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-29T11:34:50.783+02:00  INFO 2320 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-29T11:34:50.784+02:00  INFO 2320 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3812 ms
+2024-12-29T11:34:51.103+02:00  INFO 2320 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-29T11:34:51.217+02:00  INFO 2320 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2024-12-29T11:34:51.300+02:00  INFO 2320 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-29T11:34:51.871+02:00  INFO 2320 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-29T11:34:51.941+02:00  INFO 2320 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-29T11:34:52.391+02:00  INFO 2320 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/testdb user=SA  
+2024-12-29T11:34:52.397+02:00  INFO 2320 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-29T11:34:52.479+02:00  WARN 2320 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-29T11:34:52.540+02:00  INFO 2320 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-29T11:34:54.252+02:00  INFO 2320 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-29T11:34:54.380+02:00  INFO 2320 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-29T11:34:55.348+02:00  WARN 2320 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-29T11:34:55.403+02:00  WARN 2320 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 668c2083-310d-46d8-a9db-291f6d192e2c
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-12-29T11:34:55.456+02:00  INFO 2320 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-12-29T11:34:56.503+02:00  INFO 2320 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/testdb'
+2024-12-29T11:34:56.648+02:00  INFO 2320 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-29T11:34:56.730+02:00  INFO 2320 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8088 (http) with context path '/'
+2024-12-29T11:34:56.754+02:00  INFO 2320 --- [restartedMain] c.e.c.CarManagementApplication           : Started CarManagementApplication in 10.911 seconds (process running for 11.934)
+2024-12-29T11:34:56.990+02:00  INFO 2320 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-29T11:34:56.991+02:00  INFO 2320 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-29T11:34:56.993+02:00  INFO 2320 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-12-29T11:35:05.517+02:00  INFO 2320 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-29T11:35:06.015+02:00  INFO 2320 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-29T11:35:06.025+02:00  INFO 2320 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-29T11:35:06.025+02:00  INFO 2320 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-29T11:35:06.032+02:00  INFO 2320 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-29T11:36:48.937+02:00  INFO 18868 --- [restartedMain] c.e.c.CarManagementApplication           : Starting CarManagementApplication using Java 17.0.1 with PID 18868 (C:\Users\User\spring\car-managment\target\classes started by kiski in C:\Users\User\spring\car-managment)
+2024-12-29T11:36:48.943+02:00  INFO 18868 --- [restartedMain] c.e.c.CarManagementApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-12-29T11:36:49.105+02:00  INFO 18868 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-29T11:36:49.106+02:00  INFO 18868 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-29T11:36:50.653+02:00  INFO 18868 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-29T11:36:50.821+02:00  INFO 18868 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 140 ms. Found 2 JPA repository interfaces.
+2024-12-29T11:36:52.481+02:00  INFO 18868 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8088 (http)
+2024-12-29T11:36:52.521+02:00  INFO 18868 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-29T11:36:52.521+02:00  INFO 18868 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-29T11:36:52.637+02:00  INFO 18868 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-29T11:36:52.637+02:00  INFO 18868 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3528 ms
+2024-12-29T11:36:52.992+02:00  INFO 18868 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-29T11:36:53.116+02:00  INFO 18868 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2024-12-29T11:36:53.186+02:00  INFO 18868 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-29T11:36:53.845+02:00  INFO 18868 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-29T11:36:53.911+02:00  INFO 18868 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-29T11:36:54.233+02:00  INFO 18868 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/testdb user=SA  
+2024-12-29T11:36:54.235+02:00  INFO 18868 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-29T11:36:54.264+02:00  WARN 18868 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-29T11:36:54.295+02:00  INFO 18868 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-29T11:36:55.746+02:00  INFO 18868 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-29T11:36:55.896+02:00  INFO 18868 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-29T11:36:56.879+02:00  WARN 18868 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-29T11:36:56.933+02:00  WARN 18868 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 517ecac6-4395-42f5-9b44-486098d31a4e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-12-29T11:36:56.986+02:00  INFO 18868 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-12-29T11:36:58.232+02:00  INFO 18868 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/testdb'
+2024-12-29T11:36:58.383+02:00  INFO 18868 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-29T11:36:58.477+02:00  INFO 18868 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8088 (http) with context path '/'
+2024-12-29T11:36:58.508+02:00  INFO 18868 --- [restartedMain] c.e.c.CarManagementApplication           : Started CarManagementApplication in 10.571 seconds (process running for 11.566)
+2024-12-29T11:36:58.788+02:00  INFO 18868 --- [http-nio-8088-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-29T11:36:58.788+02:00  INFO 18868 --- [http-nio-8088-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-29T11:36:58.792+02:00  INFO 18868 --- [http-nio-8088-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-12-29T11:37:16.662+02:00  INFO 18868 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-29T11:37:17.132+02:00  INFO 18868 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-29T11:37:17.135+02:00  INFO 18868 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-29T11:37:17.144+02:00  INFO 18868 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-29T11:37:17.144+02:00  INFO 18868 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-29T11:47:11.091+02:00  INFO 996 --- [restartedMain] c.e.c.CarManagementApplication           : Starting CarManagementApplication using Java 17.0.1 with PID 996 (C:\Users\User\spring\car-managment\target\classes started by kiski in C:\Users\User\spring\car-managment)
+2024-12-29T11:47:11.094+02:00  INFO 996 --- [restartedMain] c.e.c.CarManagementApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-12-29T11:47:11.150+02:00  INFO 996 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-29T11:47:11.151+02:00  INFO 996 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-29T11:47:11.915+02:00  INFO 996 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-29T11:47:11.992+02:00  INFO 996 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 2 JPA repository interfaces.
+2024-12-29T11:47:12.719+02:00  INFO 996 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8088 (http)
+2024-12-29T11:47:12.732+02:00  INFO 996 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-29T11:47:12.732+02:00  INFO 996 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-29T11:47:12.782+02:00  INFO 996 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-29T11:47:12.782+02:00  INFO 996 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1630 ms
+2024-12-29T11:47:13.006+02:00  INFO 996 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-29T11:47:13.094+02:00  INFO 996 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2024-12-29T11:47:13.144+02:00  INFO 996 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-29T11:47:13.496+02:00  INFO 996 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-29T11:47:13.538+02:00  INFO 996 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-29T11:47:13.780+02:00  INFO 996 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/testdb user=SA  
+2024-12-29T11:47:13.782+02:00  INFO 996 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-29T11:47:13.807+02:00  WARN 996 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-29T11:47:13.828+02:00  INFO 996 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-29T11:47:14.822+02:00  INFO 996 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-29T11:47:14.889+02:00  INFO 996 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-29T11:47:15.309+02:00  WARN 996 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-29T11:47:15.332+02:00  WARN 996 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 646f77ef-d75a-4fc6-a01f-63ef515d5565
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-12-29T11:47:15.362+02:00  INFO 996 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-12-29T11:47:15.864+02:00  INFO 996 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/testdb'
+2024-12-29T11:47:15.925+02:00  INFO 996 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-29T11:47:15.961+02:00  INFO 996 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8088 (http) with context path '/'
+2024-12-29T11:47:15.971+02:00  INFO 996 --- [restartedMain] c.e.c.CarManagementApplication           : Started CarManagementApplication in 5.403 seconds (process running for 5.982)
+2024-12-29T11:47:20.863+02:00  INFO 996 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-29T11:47:20.863+02:00  INFO 996 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-29T11:47:20.866+02:00  INFO 996 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-12-29T11:47:27.993+02:00  INFO 996 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-29T11:47:28.229+02:00  INFO 996 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-29T11:47:28.234+02:00  INFO 996 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-29T11:47:28.237+02:00  INFO 996 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-29T11:47:28.239+02:00  INFO 996 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-29T11:49:44.486+02:00  INFO 3180 --- [restartedMain] c.e.c.CarManagementApplication           : Starting CarManagementApplication using Java 17.0.1 with PID 3180 (C:\Users\User\spring\car-managment\target\classes started by kiski in C:\Users\User\spring\car-managment)
+2024-12-29T11:49:44.491+02:00  INFO 3180 --- [restartedMain] c.e.c.CarManagementApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-12-29T11:49:44.571+02:00  INFO 3180 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-29T11:49:44.571+02:00  INFO 3180 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-29T11:49:45.420+02:00  INFO 3180 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-29T11:49:45.513+02:00  INFO 3180 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81 ms. Found 2 JPA repository interfaces.
+2024-12-29T11:49:46.300+02:00  INFO 3180 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8088 (http)
+2024-12-29T11:49:46.313+02:00  INFO 3180 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-29T11:49:46.314+02:00  INFO 3180 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-29T11:49:46.358+02:00  INFO 3180 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-29T11:49:46.358+02:00  INFO 3180 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1786 ms
+2024-12-29T11:49:46.531+02:00  INFO 3180 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-29T11:49:46.594+02:00  INFO 3180 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2024-12-29T11:49:46.630+02:00  INFO 3180 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-29T11:49:46.889+02:00  INFO 3180 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-29T11:49:46.919+02:00  INFO 3180 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-29T11:49:47.118+02:00  INFO 3180 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/testdb user=SA  
+2024-12-29T11:49:47.120+02:00  INFO 3180 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-29T11:49:47.139+02:00  WARN 3180 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-29T11:49:47.160+02:00  INFO 3180 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-29T11:49:47.922+02:00  INFO 3180 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-29T11:49:47.982+02:00  INFO 3180 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-29T11:49:48.580+02:00  WARN 3180 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-29T11:49:48.606+02:00  WARN 3180 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: e9fe4f63-e33e-40a5-bad0-958048903aab
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-12-29T11:49:48.633+02:00  INFO 3180 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-12-29T11:49:49.230+02:00  INFO 3180 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/testdb'
+2024-12-29T11:49:49.407+02:00  INFO 3180 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-29T11:49:49.515+02:00  INFO 3180 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8088 (http) with context path '/'
+2024-12-29T11:49:49.541+02:00  INFO 3180 --- [restartedMain] c.e.c.CarManagementApplication           : Started CarManagementApplication in 5.525 seconds (process running for 6.042)
+2024-12-29T11:49:53.829+02:00  INFO 3180 --- [http-nio-8088-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-29T11:49:53.829+02:00  INFO 3180 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-29T11:49:53.831+02:00  INFO 3180 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-12-29T11:50:11.454+02:00  INFO 3180 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-29T11:50:11.731+02:00  INFO 3180 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-29T11:50:11.734+02:00  INFO 3180 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-29T11:50:11.736+02:00  INFO 3180 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-29T11:50:11.738+02:00  INFO 3180 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-29T11:52:54.502+02:00  INFO 22220 --- [restartedMain] c.e.c.CarManagementApplication           : Starting CarManagementApplication using Java 17.0.1 with PID 22220 (C:\Users\User\spring\car-managment\target\classes started by kiski in C:\Users\User\spring\car-managment)
+2024-12-29T11:52:54.507+02:00  INFO 22220 --- [restartedMain] c.e.c.CarManagementApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-12-29T11:52:54.563+02:00  INFO 22220 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-29T11:52:54.564+02:00  INFO 22220 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-29T11:52:55.381+02:00  INFO 22220 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-29T11:52:55.456+02:00  INFO 22220 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 2 JPA repository interfaces.
+2024-12-29T11:52:56.083+02:00  INFO 22220 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8088 (http)
+2024-12-29T11:52:56.098+02:00  INFO 22220 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-29T11:52:56.100+02:00  INFO 22220 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-29T11:52:56.144+02:00  INFO 22220 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-29T11:52:56.145+02:00  INFO 22220 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1579 ms
+2024-12-29T11:52:56.293+02:00  INFO 22220 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-29T11:52:56.346+02:00  INFO 22220 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2024-12-29T11:52:56.378+02:00  INFO 22220 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-29T11:52:56.620+02:00  INFO 22220 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-29T11:52:56.650+02:00  INFO 22220 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-29T11:52:56.899+02:00  INFO 22220 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/testdb user=SA  
+2024-12-29T11:52:56.901+02:00  INFO 22220 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-29T11:52:56.923+02:00  WARN 22220 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-29T11:52:56.952+02:00  INFO 22220 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-29T11:52:57.888+02:00  INFO 22220 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-29T11:52:57.953+02:00  INFO 22220 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-29T11:52:58.355+02:00  WARN 22220 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-29T11:52:58.392+02:00  WARN 22220 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 66919476-81b5-41e6-8610-baf29e80a470
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-12-29T11:52:58.414+02:00  INFO 22220 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-12-29T11:52:59.007+02:00  INFO 22220 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/testdb'
+2024-12-29T11:52:59.077+02:00  INFO 22220 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-29T11:52:59.121+02:00  INFO 22220 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8088 (http) with context path '/'
+2024-12-29T11:52:59.133+02:00  INFO 22220 --- [restartedMain] c.e.c.CarManagementApplication           : Started CarManagementApplication in 5.021 seconds (process running for 5.437)
+2024-12-29T11:53:00.847+02:00  INFO 22220 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-29T11:53:00.847+02:00  INFO 22220 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-29T11:53:00.848+02:00  INFO 22220 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-12-29T11:53:00.919+02:00  INFO 22220 --- [http-nio-8088-exec-1] c.e.c.controller.CarController           : Fetching all cars...
+2024-12-29T11:53:01.067+02:00  INFO 22220 --- [http-nio-8088-exec-1] c.e.car_managment.service.CarService     : Fetched Cars: [com.example.car_managment.entity.Car@186a7308, com.example.car_managment.entity.Car@5afca546]
+2024-12-29T11:53:01.078+02:00  INFO 22220 --- [http-nio-8088-exec-1] c.e.c.controller.CarController           : Cars fetched: [com.example.car_managment.dto.CarDto@7e4e678f, com.example.car_managment.dto.CarDto@45fed540]
+2024-12-29T11:53:43.730+02:00  INFO 22220 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-29T11:53:43.974+02:00  INFO 22220 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-29T11:53:43.978+02:00  INFO 22220 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-29T11:53:43.982+02:00  INFO 22220 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-29T11:53:43.984+02:00  INFO 22220 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-29T11:57:56.700+02:00  INFO 2084 --- [restartedMain] c.e.c.CarManagementApplication           : Starting CarManagementApplication using Java 17.0.1 with PID 2084 (C:\Users\User\spring\car-managment\target\classes started by kiski in C:\Users\User\spring\car-managment)
+2024-12-29T11:57:56.708+02:00  INFO 2084 --- [restartedMain] c.e.c.CarManagementApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-12-29T11:57:56.772+02:00  INFO 2084 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-29T11:57:56.773+02:00  INFO 2084 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-29T11:57:57.451+02:00  INFO 2084 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-29T11:57:57.514+02:00  INFO 2084 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 2 JPA repository interfaces.
+2024-12-29T11:57:58.111+02:00  INFO 2084 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8088 (http)
+2024-12-29T11:57:58.123+02:00  INFO 2084 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-29T11:57:58.123+02:00  INFO 2084 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-29T11:57:58.161+02:00  INFO 2084 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-29T11:57:58.161+02:00  INFO 2084 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1388 ms
+2024-12-29T11:57:58.308+02:00  INFO 2084 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-29T11:57:58.365+02:00  INFO 2084 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2024-12-29T11:57:58.405+02:00  INFO 2084 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-29T11:57:58.671+02:00  INFO 2084 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-29T11:57:58.716+02:00  INFO 2084 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-29T11:57:58.908+02:00  INFO 2084 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/testdb user=SA  
+2024-12-29T11:57:58.909+02:00  INFO 2084 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-29T11:57:58.926+02:00  WARN 2084 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-29T11:57:58.944+02:00  INFO 2084 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-29T11:57:59.647+02:00  INFO 2084 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-29T11:57:59.706+02:00  INFO 2084 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-29T11:58:00.326+02:00  WARN 2084 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-29T11:58:00.372+02:00  WARN 2084 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 5415dda4-af73-46ef-81aa-8fddca6d6133
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-12-29T11:58:00.404+02:00  INFO 2084 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-12-29T11:58:00.939+02:00  INFO 2084 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/testdb'
+2024-12-29T11:58:00.998+02:00  INFO 2084 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-29T11:58:01.033+02:00  INFO 2084 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8088 (http) with context path '/'
+2024-12-29T11:58:01.042+02:00  INFO 2084 --- [restartedMain] c.e.c.CarManagementApplication           : Started CarManagementApplication in 4.767 seconds (process running for 5.204)
+2024-12-29T11:58:10.436+02:00  INFO 2084 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-29T11:58:10.436+02:00  INFO 2084 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-29T11:58:10.438+02:00  INFO 2084 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-12-29T11:58:10.506+02:00  INFO 2084 --- [http-nio-8088-exec-2] c.e.c.controller.CarController           : Fetching all cars...
+2024-12-29T11:58:10.671+02:00  INFO 2084 --- [http-nio-8088-exec-2] c.e.car_managment.service.CarService     : Fetched Cars: [com.example.car_managment.entity.Car@4b4a841d, com.example.car_managment.entity.Car@1b990eda]
+2024-12-29T11:58:10.689+02:00  INFO 2084 --- [http-nio-8088-exec-2] c.e.c.controller.CarController           : Cars fetched: [com.example.car_managment.dto.CarDto@431db28a, com.example.car_managment.dto.CarDto@73207f4e]
+2024-12-29T11:58:30.482+02:00  INFO 2084 --- [http-nio-8088-exec-3] c.e.c.controller.CarController           : Fetching all cars...
+2024-12-29T11:58:30.485+02:00  INFO 2084 --- [http-nio-8088-exec-3] c.e.car_managment.service.CarService     : Fetched Cars: [com.example.car_managment.entity.Car@63bd7837, com.example.car_managment.entity.Car@4aef1b21]
+2024-12-29T11:58:30.487+02:00  INFO 2084 --- [http-nio-8088-exec-3] c.e.c.controller.CarController           : Cars fetched: [com.example.car_managment.dto.CarDto@198b1397, com.example.car_managment.dto.CarDto@694b5192]
+2024-12-29T11:58:53.401+02:00  INFO 2084 --- [http-nio-8088-exec-7] c.e.c.controller.CarController           : Fetching all cars...
+2024-12-29T11:58:53.403+02:00  INFO 2084 --- [http-nio-8088-exec-7] c.e.car_managment.service.CarService     : Fetched Cars: [com.example.car_managment.entity.Car@39266c40, com.example.car_managment.entity.Car@25e1ca91]
+2024-12-29T11:58:53.405+02:00  INFO 2084 --- [http-nio-8088-exec-7] c.e.c.controller.CarController           : Cars fetched: [com.example.car_managment.dto.CarDto@4bb0229e, com.example.car_managment.dto.CarDto@7a32a41a]
+2024-12-29T11:59:29.282+02:00  INFO 2084 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-29T11:59:29.526+02:00  INFO 2084 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-29T11:59:29.530+02:00  INFO 2084 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-29T11:59:29.534+02:00  INFO 2084 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-29T11:59:29.535+02:00  INFO 2084 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-29T12:04:19.543+02:00  INFO 20020 --- [restartedMain] c.e.c.CarManagementApplication           : Starting CarManagementApplication using Java 17.0.1 with PID 20020 (C:\Users\User\spring\car-managment\target\classes started by kiski in C:\Users\User\spring\car-managment)
+2024-12-29T12:04:19.548+02:00  INFO 20020 --- [restartedMain] c.e.c.CarManagementApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-12-29T12:04:19.604+02:00  INFO 20020 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-29T12:04:19.604+02:00  INFO 20020 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-29T12:04:20.263+02:00  INFO 20020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-29T12:04:20.324+02:00  INFO 20020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 2 JPA repository interfaces.
+2024-12-29T12:04:20.928+02:00  INFO 20020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8088 (http)
+2024-12-29T12:04:20.940+02:00  INFO 20020 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-29T12:04:20.941+02:00  INFO 20020 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-29T12:04:20.981+02:00  INFO 20020 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-29T12:04:20.982+02:00  INFO 20020 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1377 ms
+2024-12-29T12:04:21.111+02:00  INFO 20020 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-29T12:04:21.171+02:00  INFO 20020 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2024-12-29T12:04:21.202+02:00  INFO 20020 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-29T12:04:21.432+02:00  INFO 20020 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-29T12:04:21.460+02:00  INFO 20020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-29T12:04:21.622+02:00  INFO 20020 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/testdb user=SA  
+2024-12-29T12:04:21.623+02:00  INFO 20020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-29T12:04:21.639+02:00  WARN 20020 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-29T12:04:21.657+02:00  INFO 20020 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-29T12:04:22.413+02:00  INFO 20020 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-29T12:04:22.471+02:00  INFO 20020 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-29T12:04:22.809+02:00  WARN 20020 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-29T12:04:22.826+02:00  WARN 20020 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: fe489087-b7c4-4ed7-b240-ecee57b10e29
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-12-29T12:04:22.844+02:00  INFO 20020 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-12-29T12:04:23.225+02:00  INFO 20020 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/testdb'
+2024-12-29T12:04:23.288+02:00  INFO 20020 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-29T12:04:23.318+02:00  INFO 20020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8088 (http) with context path '/'
+2024-12-29T12:04:23.327+02:00  INFO 20020 --- [restartedMain] c.e.c.CarManagementApplication           : Started CarManagementApplication in 4.21 seconds (process running for 4.63)
+2024-12-29T12:04:32.388+02:00  INFO 20020 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-29T12:04:32.388+02:00  INFO 20020 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-29T12:04:32.389+02:00  INFO 20020 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-12-29T12:04:32.488+02:00  INFO 20020 --- [http-nio-8088-exec-2] c.e.c.controller.CarController           : Fetching all cars...
+2024-12-29T12:04:32.663+02:00  INFO 20020 --- [http-nio-8088-exec-2] c.e.car_managment.service.CarService     : Fetched Cars: [com.example.car_managment.entity.Car@4a1a1b41, com.example.car_managment.entity.Car@19bf99d2]
+2024-12-29T12:04:32.676+02:00  INFO 20020 --- [http-nio-8088-exec-2] c.e.c.controller.CarController           : Cars fetched: [com.example.car_managment.dto.CarDto@1f4a9599, com.example.car_managment.dto.CarDto@541063ab]
+2024-12-29T12:06:27.730+02:00  INFO 20020 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-29T12:06:27.978+02:00  INFO 20020 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-29T12:06:27.980+02:00  INFO 20020 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-29T12:06:27.983+02:00  INFO 20020 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-29T12:06:27.986+02:00  INFO 20020 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
