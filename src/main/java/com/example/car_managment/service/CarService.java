@@ -126,7 +126,7 @@ public class CarService {
         List<Car> cars = carRepository.findByGarages_Id(garageId);
         return cars.stream().map(this::convertToDTO).collect(Collectors.toList());
     }
-    git 
+
     public List<CarDto> getCarsByYearRange(Integer fromYear, Integer toYear) {
         List<Car> cars = carRepository.findByProductionYearBetween(
                 fromYear != null ? fromYear : Integer.MIN_VALUE,

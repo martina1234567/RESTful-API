@@ -4,25 +4,7 @@ import jakarta.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
-//@Entity
-//public class Car {
-//
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    private Long id;
-//
-//    private String make;
-//    private String model;
-//    private int productionYear;
-//    private String licensePlate;
-//
-//    @ManyToMany
-//    @JoinTable(
-//            name = "car_garage",
-//            joinColumns = @JoinColumn(name = "car_id"),
-//            inverseJoinColumns = @JoinColumn(name = "garage_id")
-//    )
-//    private Set<Garage> garages = new HashSet<>();
+
 @Entity
 public class Car {
     @Id
