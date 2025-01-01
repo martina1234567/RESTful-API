@@ -66,6 +66,16 @@ public class MaintenanceController {
         return ResponseEntity.ok(maintenanceService.getAllMaintenance());
     }
 
+    // DELETE /garages/{id}
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteGarage(@PathVariable Long id) {
+        if (maintenanceService.deleteMaintenance(id)) {
+            return ResponseEntity.ok().build();
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+    }
+
 
 
 }

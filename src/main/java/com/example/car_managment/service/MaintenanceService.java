@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.example.car_managment.entity.Maintenance;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 
@@ -71,6 +72,14 @@ public class MaintenanceService {
 
         // Map and return the DTO
         return mapToDto(maintenance);
+    }
+    public boolean deleteMaintenance(Long id) {
+        Optional<Maintenance> maintenance = maintenanceRepository.findById(id);
+        if (maintenance.isPresent()) {
+            maintenanceRepository.deleteById(id);
+            return true;
+        }
+        return false;
     }
 
 //    @Transactional
