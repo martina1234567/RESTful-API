@@ -1,5 +1,15 @@
 package com.example.car_managment.service;
 
+import com.example.car_managment.dto.GarageDto;
+import com.example.car_managment.dto.MaintenanceDto;
+import com.example.car_managment.repository.MaintenanceRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import com.example.car_managment.entity.Maintenance;
+import java.util.List;
+import java.util.stream.Collectors;
+
+
 import com.example.car_managment.dto.CreateMaintenanceDto;
 import com.example.car_managment.dto.MaintenanceDto;
 import com.example.car_managment.entity.Car;
@@ -27,6 +37,11 @@ public class MaintenanceService {
         this.maintenanceRepository = maintenanceRepository;
         this.garageRepository = garageRepository;
         this.carRepository = carRepository;
+    }
+
+    public List<MaintenanceDto> getAllMaintenance() {
+        List<Maintenance> maintenance = maintenanceRepository.findAll();
+        return maintenance.stream().map(this::mapToDto).toList();
     }
 
     @Transactional
@@ -58,6 +73,59 @@ public class MaintenanceService {
         return mapToDto(maintenance);
     }
 
+//    @Transactional
+//    public MaintenanceDto editMaintenance(Long maintenanceId, CreateMaintenanceDto dto) {
+//        Maintenance existingMaintenance = maintenanceRepository.findById(maintenanceId)
+//                .orElseThrow(() -> new ResourceNotFoundException("Maintenance record not found with id: " + maintenanceId));
+//
+//        validateGarageAvailability(dto.getGarageId(), dto.getScheduledDate());
+//        Maintenance updatedMaintenance = mapToEntity(dto, existingMaintenance);
+//        updatedMaintenance = maintenanceRepository.save(updatedMaintenance);
+//
+//        return mapToDto(updatedMaintenance);
+//    }
+@Transactional
+public MaintenanceDto editMaintenance(Long maintenanceId, CreateMaintenanceDto dto) {
+    Maintenance existingMaintenance = maintenanceRepository.findById(maintenanceId)
+            .orElseThrow(() -> new ResourceNotFoundException("Maintenance record not found with id: " + maintenanceId));
+
+    validateGarageAvailability(dto.getGarageId(), dto.getScheduledDate());
+
+    Maintenance updatedMaintenance = mapToEntity(dto, existingMaintenance);
+    maintenanceRepository.save(updatedMaintenance);
+
+    // Reload the updated data to ensure freshness
+    Maintenance reloadedMaintenance = maintenanceRepository.findById(maintenanceId)
+            .orElseThrow(() -> new ResourceNotFoundException("Maintenance record not found after update with id: " + maintenanceId));
+
+    return mapToDto(reloadedMaintenance);
+}
+
+
+    private void validateGarageAvailability(Long garageId, LocalDate scheduledDate) {
+        Garage garage = garageRepository.findById(garageId)
+                .orElseThrow(() -> new ResourceNotFoundException("Garage not found with id: " + garageId));
+
+        boolean isGarageFull = maintenanceRepository.countByGarageIdAndScheduledDate(garageId, scheduledDate) >= garage.getCapacity();
+        if (isGarageFull) {
+            throw new GarageFullException("No available slots in the garage on " + scheduledDate);
+        }
+    }
+
+    private Maintenance mapToEntity(CreateMaintenanceDto dto, Maintenance maintenance) {
+        Garage garage = garageRepository.findById(dto.getGarageId())
+                .orElseThrow(() -> new ResourceNotFoundException("Garage not found with id: " + dto.getGarageId()));
+
+        Car car = carRepository.findById(dto.getCarId())
+                .orElseThrow(() -> new ResourceNotFoundException("Car not found with id: " + dto.getCarId()));
+
+        maintenance.setGarage(garage);
+        maintenance.setCar(car);
+        maintenance.setServiceType(dto.getServiceType());
+        maintenance.setScheduledDate(dto.getScheduledDate());
+        return maintenance;
+    }
+
     private MaintenanceDto mapToDto(Maintenance maintenance) {
         MaintenanceDto dto = new MaintenanceDto();
         dto.setId(maintenance.getId());
@@ -70,3 +138,4 @@ public class MaintenanceService {
         return dto;
     }
 }
+
