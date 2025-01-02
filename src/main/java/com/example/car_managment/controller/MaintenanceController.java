@@ -5,6 +5,7 @@ import com.example.car_managment.dto.GarageDto;
 import com.example.car_managment.dto.MaintenanceDto;
 import com.example.car_managment.service.MaintenanceService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @RestController
@@ -46,24 +48,25 @@ public class MaintenanceController {
         }
     }
     // GET /maintenance
+//    @GetMapping
+//    public ResponseEntity<List<MaintenanceDto>> getAllMaintenance(
+//            @RequestParam(required = false) Long carId,
+//            @RequestParam(required = false) Long garageId,
+//            @RequestParam(required = false) String scheduledDate) {
+//
+//
+//
+//        return ResponseEntity.ok(maintenanceService.getAllMaintenance());
+//    }
     @GetMapping
     public ResponseEntity<List<MaintenanceDto>> getAllMaintenance(
             @RequestParam(required = false) Long carId,
             @RequestParam(required = false) Long garageId,
-            @RequestParam(required = false) String scheduledDate) {
+            @RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate startDate,
+            @RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate endDate) {
 
-        // Add filtering logic if necessary
-//        if (carId != null) {
-//            return ResponseEntity.ok(maintenanceService.getMaintenanceByCarId(carId));
-//        }
-//        if (garageId != null) {
-//            return ResponseEntity.ok(maintenanceService.getMaintenanceByGarageId(garageId));
-//        }
-//        if (scheduledDate != null) {
-//            return ResponseEntity.ok(maintenanceService.getMaintenanceByScheduledDate(scheduledDate));
-//        }
-
-        return ResponseEntity.ok(maintenanceService.getAllMaintenance());
+        List<MaintenanceDto> filteredMaintenances = maintenanceService.getMaintenanceFiltered(carId, garageId, startDate, endDate);
+        return ResponseEntity.ok(filteredMaintenances);
     }
 
     // DELETE /garages/{id}

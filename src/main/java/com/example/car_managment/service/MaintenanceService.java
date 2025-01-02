@@ -1,7 +1,6 @@
 package com.example.car_managment.service;
 
-import com.example.car_managment.dto.GarageDto;
-import com.example.car_managment.dto.MaintenanceDto;
+import com.example.car_managment.dto.*;
 import com.example.car_managment.repository.MaintenanceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,7 +10,6 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 
-import com.example.car_managment.dto.CreateMaintenanceDto;
 import com.example.car_managment.dto.MaintenanceDto;
 import com.example.car_managment.entity.Car;
 import com.example.car_managment.entity.Garage;
@@ -82,33 +80,22 @@ public class MaintenanceService {
         return false;
     }
 
-//    @Transactional
-//    public MaintenanceDto editMaintenance(Long maintenanceId, CreateMaintenanceDto dto) {
-//        Maintenance existingMaintenance = maintenanceRepository.findById(maintenanceId)
-//                .orElseThrow(() -> new ResourceNotFoundException("Maintenance record not found with id: " + maintenanceId));
-//
-//        validateGarageAvailability(dto.getGarageId(), dto.getScheduledDate());
-//        Maintenance updatedMaintenance = mapToEntity(dto, existingMaintenance);
-//        updatedMaintenance = maintenanceRepository.save(updatedMaintenance);
-//
-//        return mapToDto(updatedMaintenance);
-//    }
-@Transactional
-public MaintenanceDto editMaintenance(Long maintenanceId, CreateMaintenanceDto dto) {
-    Maintenance existingMaintenance = maintenanceRepository.findById(maintenanceId)
-            .orElseThrow(() -> new ResourceNotFoundException("Maintenance record not found with id: " + maintenanceId));
+    @Transactional
+    public MaintenanceDto editMaintenance(Long maintenanceId, CreateMaintenanceDto dto) {
+        Maintenance existingMaintenance = maintenanceRepository.findById(maintenanceId)
+                .orElseThrow(() -> new ResourceNotFoundException("Maintenance record not found with id: " + maintenanceId));
 
-    validateGarageAvailability(dto.getGarageId(), dto.getScheduledDate());
+        validateGarageAvailability(dto.getGarageId(), dto.getScheduledDate());
 
-    Maintenance updatedMaintenance = mapToEntity(dto, existingMaintenance);
-    maintenanceRepository.save(updatedMaintenance);
+        Maintenance updatedMaintenance = mapToEntity(dto, existingMaintenance);
+        maintenanceRepository.save(updatedMaintenance);
 
-    // Reload the updated data to ensure freshness
-    Maintenance reloadedMaintenance = maintenanceRepository.findById(maintenanceId)
-            .orElseThrow(() -> new ResourceNotFoundException("Maintenance record not found after update with id: " + maintenanceId));
+        // Reload the updated data to ensure freshness
+        Maintenance reloadedMaintenance = maintenanceRepository.findById(maintenanceId)
+                .orElseThrow(() -> new ResourceNotFoundException("Maintenance record not found after update with id: " + maintenanceId));
 
-    return mapToDto(reloadedMaintenance);
-}
+        return mapToDto(reloadedMaintenance);
+    }
 
 
     private void validateGarageAvailability(Long garageId, LocalDate scheduledDate) {
@@ -146,5 +133,26 @@ public MaintenanceDto editMaintenance(Long maintenanceId, CreateMaintenanceDto d
         dto.setGarageName(maintenance.getGarage().getName());
         return dto;
     }
+
+    public List<MaintenanceDto> getMaintenanceFiltered(Long carId, Long garageId, LocalDate startDate, LocalDate endDate) {
+        List<Maintenance> maintenances;
+
+        if (carId != null && garageId != null && startDate != null && endDate != null) {
+            maintenances = maintenanceRepository.findByCarIdAndGarageIdAndScheduledDateBetween(carId, garageId, startDate, endDate);
+        } else if (carId != null) {
+            maintenances = maintenanceRepository.findByCar_Id(carId);
+        } else if (garageId != null) {
+            maintenances = maintenanceRepository.findByGarage_Id(garageId);
+        } else if (startDate != null && endDate != null) {
+            maintenances = maintenanceRepository.findByScheduledDateBetween(startDate, endDate);
+        } else {
+            maintenances = maintenanceRepository.findAll();
+        }
+
+        return maintenances.stream().map(this::mapToDto).collect(Collectors.toList());
+    }
+
+
+
 }
 
