@@ -3,6 +3,7 @@ package com.example.car_managment.controller;
 import com.example.car_managment.dto.CreateMaintenanceDto;
 import com.example.car_managment.dto.GarageDto;
 import com.example.car_managment.dto.MaintenanceDto;
+import com.example.car_managment.dto.MonthlyRequestsReportDto;
 import com.example.car_managment.service.MaintenanceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -14,6 +15,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
+import java.time.YearMonth;
 import java.util.List;
 
 @RestController
@@ -25,9 +27,6 @@ public class MaintenanceController {
     public MaintenanceController(MaintenanceService maintenanceService) {
         this.maintenanceService = maintenanceService;
     }
-
-
-
 
     @PostMapping
     public ResponseEntity<MaintenanceDto> createMaintenance(@RequestBody CreateMaintenanceDto createMaintenanceDto) {
@@ -47,17 +46,7 @@ public class MaintenanceController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
     }
-    // GET /maintenance
-//    @GetMapping
-//    public ResponseEntity<List<MaintenanceDto>> getAllMaintenance(
-//            @RequestParam(required = false) Long carId,
-//            @RequestParam(required = false) Long garageId,
-//            @RequestParam(required = false) String scheduledDate) {
-//
-//
-//
-//        return ResponseEntity.ok(maintenanceService.getAllMaintenance());
-//    }
+
     @GetMapping
     public ResponseEntity<List<MaintenanceDto>> getAllMaintenance(
             @RequestParam(required = false) Long carId,
@@ -79,7 +68,15 @@ public class MaintenanceController {
         }
     }
 
+    @GetMapping("/monthlyRequestsReport")
+    public ResponseEntity<List<MonthlyRequestsReportDto>> getMonthlyRequestsReport(
+            @RequestParam Long garageId,
+            @RequestParam @DateTimeFormat(pattern = "yyyy-MM") YearMonth startMonth,
+            @RequestParam @DateTimeFormat(pattern = "yyyy-MM") YearMonth endMonth) {
 
+        List<MonthlyRequestsReportDto> report = maintenanceService.getMonthlyRequestsSimpleReport(garageId, startMonth, endMonth);
+        return ResponseEntity.ok(report);
+    }
 
 }
 

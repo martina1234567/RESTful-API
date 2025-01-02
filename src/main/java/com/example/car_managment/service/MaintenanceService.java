@@ -5,6 +5,9 @@ import com.example.car_managment.repository.MaintenanceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.example.car_managment.entity.Maintenance;
+
+import java.time.YearMonth;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -152,7 +155,32 @@ public class MaintenanceService {
         return maintenances.stream().map(this::mapToDto).collect(Collectors.toList());
     }
 
+    public List<MonthlyRequestsReportDto> getMonthlyRequestsSimpleReport(Long garageId, YearMonth startMonth, YearMonth endMonth) {
+        List<MonthlyRequestsReportDto> report = new ArrayList<>();
 
+        YearMonth currentMonth = startMonth;
+        while (!currentMonth.isAfter(endMonth)) {
+            LocalDate startDate = currentMonth.atDay(1);
+            LocalDate endDate = currentMonth.atEndOfMonth();
+
+            long requestsCount = maintenanceRepository.countByGarageIdAndDateRange(garageId, startDate, endDate);
+
+            // Create YearMonthDto
+            YearMonthDto yearMonthDto = new YearMonthDto(
+                    currentMonth.getYear(),
+                    currentMonth.getMonth().name(),
+                    currentMonth.isLeapYear(),
+                    currentMonth.getMonthValue()
+            );
+
+            // Add to the report
+            report.add(new MonthlyRequestsReportDto(yearMonthDto, requestsCount));
+
+            currentMonth = currentMonth.plusMonths(1);
+        }
+
+        return report;
+    }
 
 }
 
